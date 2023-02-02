@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aar-lP-KaY">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Precheck View Controller-->
+        <scene sceneID="tR7-cA-c2e">
+            <objects>
+                <viewController storyboardIdentifier="PrecheckViewController" id="Aar-lP-KaY" customClass="PrecheckViewController" customModule="PrecheckLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U9Y-eo-qQq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="fCZ-5C-822">
+                                <rect key="frame" x="147.5" y="293.5" width="80" height="80"/>
+                                <color key="tintColor" name="rw-dark"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="IXn-wf-tnE"/>
+                                    <constraint firstAttribute="width" constant="80" id="da1-L8-VOG"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Czg-41-0ht" userLabel="FrameView" customClass="FrameView" customModule="PrecheckLibrary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zG-7Q-Br3">
+                                <rect key="frame" x="0.0" y="637" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5E3-3m-hrQ"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fCZ-5C-822" firstAttribute="centerY" secondItem="U9Y-eo-qQq" secondAttribute="centerY" id="4kT-9V-GYY"/>
+                            <constraint firstAttribute="top" secondItem="Czg-41-0ht" secondAttribute="top" id="6P8-QH-Bp7"/>
+                            <constraint firstItem="Czg-41-0ht" firstAttribute="leading" secondItem="U9Y-eo-qQq" secondAttribute="leading" id="Adn-Pn-zBD"/>
+                            <constraint firstItem="5E3-3m-hrQ" firstAttribute="bottom" secondItem="7zG-7Q-Br3" secondAttribute="bottom" constant="30" id="HkI-94-SPC"/>
+                            <constraint firstItem="5E3-3m-hrQ" firstAttribute="trailing" secondItem="7zG-7Q-Br3" secondAttribute="trailing" id="IYG-ke-JIa"/>
+                            <constraint firstAttribute="bottom" secondItem="Czg-41-0ht" secondAttribute="bottom" id="Kdp-kw-APR"/>
+                            <constraint firstItem="7zG-7Q-Br3" firstAttribute="centerX" secondItem="U9Y-eo-qQq" secondAttribute="centerX" id="OEc-AT-gij"/>
+                            <constraint firstItem="7zG-7Q-Br3" firstAttribute="leading" secondItem="5E3-3m-hrQ" secondAttribute="leading" id="Ve6-Qs-1mD"/>
+                            <constraint firstAttribute="trailing" secondItem="Czg-41-0ht" secondAttribute="trailing" id="m0J-Yv-NzC"/>
+                            <constraint firstItem="fCZ-5C-822" firstAttribute="centerX" secondItem="U9Y-eo-qQq" secondAttribute="centerX" id="mWZ-CV-7zw"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Gax-pf-er4" appends="YES" id="Y9h-Ee-WNx"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="checkmark" destination="fCZ-5C-822" id="ygU-FU-zHF"/>
+                        <outlet property="frameView" destination="Czg-41-0ht" id="gGs-nx-8fT"/>
+                        <outlet property="message" destination="7zG-7Q-Br3" id="fgi-qe-mbJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhd-pc-gnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gax-pf-er4">
+                    <connections>
+                        <action selector="handleTap:" destination="Aar-lP-KaY" id="rLU-al-k4b"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-234.40000000000001" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="check" width="279" height="278"/>
+        <namedColor name="rw-dark">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
